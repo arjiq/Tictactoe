@@ -8,6 +8,7 @@ export default class Game {
         this.turn = "X";
         this.board = new Array(9).fill(null);
         this.winner = null;
+        playText.innerHTML = `Let's play! Player X starts`;
     }
 
     nextTurn() {
@@ -27,11 +28,14 @@ export default class Game {
             return;
         }
         this.board[i] = this.turn;
+        
         let winningCombination = this.findWinningCombination()
         if(!winningCombination){
             this.nextTurn();
+            playText.innerHTML = `Player ${this.turn} goes`;
         } else {
             this.winner = winningCombination[0]
+            playText.innerHTML = `Player ${this.turn} is the winner!`;
         }
         
     }

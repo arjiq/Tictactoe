@@ -87,13 +87,13 @@ body {
   }
 
   .player-x.active {
-    color: #42BED7;
-    border-color: #42BED7;
+    color: purple;
+    border-color: purple;
   }
 
   .player-o.active {
-    color: #D7BAFB;
-    border-color: #D7BAFB;
+    color: black;
+    border-color: black;
   }
 
   .player-o {
@@ -137,11 +137,11 @@ body {
   }
 
   .tile-x {
-    color: #42BED7;
+    color: purple;
   }
 
   .tile-o {
-    color: #D7BAFB
+    color: black;
   }
   
   .board__tile:not(:nth-child(3n)) {
@@ -156,15 +156,19 @@ body {
   }
   
   .board__tile--winner span {
-    color: #23CE6B !important;
+    color: yellow !important;
   }
   
   @media only screen and (max-width: 1200px) {
     .wrapper {
       flex-direction: column;
-
+      text-align: center;
     }
     .left {
       margin-bottom: 50px;
+    }
+
+    .restart {
+      margin-left: 30%;
     }
   }
